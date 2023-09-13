@@ -462,7 +462,7 @@ img {
   margin-left: -10px;
   width: 62px;
   height: 48px;
-  background-image: url(../images/quote-open-white.svg);
+  background-image: url(../images/SVG/quote-open-white.svg);
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -542,9 +542,7 @@ img {
 .pricing-section {
   padding: 10px 0 0;
 }
-.pricing-header h2 {
-  width: 100%;
-  margin: 0 auto;
+.pricing-header h2 {  
   text-align: center;
 }
 
@@ -605,8 +603,6 @@ img {
 }
 .pricing-card--enterprise {
   background-color: #faf5fc;
-}
-.pricing-card h2 {
 }
 .pricing-card p {
   margin: 4px 0px 16px;
@@ -812,8 +808,6 @@ img {
 /* ========== Responsive ========= */
 
 @media (min-width: 768px) {
-  .btn--outline {
-  }
   .btn--lg {
     width: auto;
   }
@@ -1053,8 +1047,40 @@ img {
   }
 
   /* ======== Pricing ========== */
+  .pricing-header h2{
+    margin: 0 auto;
+    max-width: 400px;
+
+  }
   .pricing-content {
-    justify-content: SPACE-BETWEEN;
+    justify-content: space-between;
+  }
+  .pricing-content-wrapper{
+    position: relative;
+  }
+  .pricing-content-wrapper::before{
+    content: "";
+    position: absolute;
+    bottom: -45px;
+    left: -45px;
+    background-image: url(../images/price_1.png);
+    width: 100%;
+    height: calc(100% + 136px);
+    z-index: -1;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .pricing-content-wrapper::after{
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    right: -62px;
+    background-image: url(../images/price_2.png);
+    width: 275px;
+    height: 76%;
+    z-index: -1;
+    background-size: contain;
+    background-repeat: no-repeat;
   }
   .pricing-card {
     width: 30%;
@@ -1081,18 +1107,6 @@ img {
     background-position: center right;
     background-size: contain;
   }
-  .revolutionize-wrapper::after {
-    position: absolute;
-    content: "";
-    right: 0;
-    top: 0;
-    width: 270px;
-    height: 100%;
-    background: url(../images/footer__side.png);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
 
   .revolutionize-wrapper a {
     margin-top: 0;
@@ -1111,6 +1125,9 @@ img {
   .footer__bottom {
     flex-direction: row;
   }
+  .footer__bottom > div{
+    flex: 1;
+  }
   .footer__copywright__text {
     order: unset;
     margin-top: initial;
@@ -1126,6 +1143,7 @@ img {
     display: flex;
     order: unset;
     margin-top: initial;
+    justify-content: flex-end;
   }
   .footer__menu a {
     margin: 0 10px;
