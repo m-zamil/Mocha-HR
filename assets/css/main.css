@@ -918,7 +918,7 @@ img {
 
   .ai-driven-items {
     gap: 100px 40px;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin-bottom: 100px;
     margin-bottom: 70px;
   }
