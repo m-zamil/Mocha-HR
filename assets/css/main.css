@@ -885,6 +885,9 @@ img {
     padding: 22px;
   }
   /* ========== Clients ======= */
+  .clients{
+    margin: 146px 0 80px;
+  }
   .clients__text {
     text-align: center;
   }
@@ -893,6 +896,7 @@ img {
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
+    padding-top: 16px;
   }
   .clients__logos img:not(:first-child) {
     margin-left: 80px;
@@ -913,29 +917,29 @@ img {
     margin: 0;
   }
   .ai-driven-header > img {
-    margin: 0 auto 30px;
+    margin: 30px auto 30px;
   }
 
   .ai-driven-items {
-    gap: 100px 40px;
-    justify-content: space-evenly;
-    margin-bottom: 100px;
-    margin-bottom: 70px;
+    gap: 140px 40px;
+    margin-bottom: 120px;
   }
   .ai-driven-item {
     margin-bottom: 0;
   }
 
   .ai-driven-header h2 {
-    max-width: 460px;
+    font-size: clamp(1.75rem, 0.9077rem + 2.6954vw, 3rem);
+    max-width: 560px;
+    line-height: 1.12;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
   }
   .ai-driven-header p {
     text-align: center;
-    margin: 40px auto 60px;
-    margin: 30px auto 80px;
+    margin: 22px auto 114px;
+    
   }
 
   /* ========== Mocha Works ======= */
