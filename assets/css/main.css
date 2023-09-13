@@ -867,7 +867,7 @@ img {
     flex-basis: 50%;
   }
   .hero__heading {
-    margin-right: -10px;
+    margin-right: -30px;
     margin-top: 0;
     margin-top: 28px;
     letter-spacing: -1.3px;
@@ -930,7 +930,7 @@ img {
 
   .ai-driven-header h2 {
     font-size: clamp(1.75rem, 0.9077rem + 2.6954vw, 3rem);
-    max-width: 560px;
+    max-width: 600px;
     line-height: 1.12;
     margin-left: auto;
     margin-right: auto;
@@ -946,9 +946,7 @@ img {
   .mocha-works__wrapper {
     display: flex;
     justify-content: space-between;
-    margin: 64px 0;
-    padding-left: 5%;
-    padding-right: 5%;
+    margin: 150px 0 64px;
   }
   .mocha-works__wrapper > div {
     flex-basis: 45%;
@@ -977,6 +975,7 @@ img {
   }
   .mocha-works-image {
     display: block;
+    margin-right: -10%;
   }
   /* ============= Reviews Section ======== */
   .review-section {
@@ -993,8 +992,9 @@ img {
   }
 
   .review-header h2 {
+    font-size: clamp(1.75rem, 0.9077rem + 2.6954vw, 3rem);
     text-align: center;
-    max-width: 500px;
+    max-width: 650px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -1002,7 +1002,7 @@ img {
     text-align: center;
   }
   .review-header {
-    padding-top: 120px;
+    padding-top: 170px;
   }
   .review {
     display: flex;
@@ -1045,15 +1045,25 @@ img {
   }
 
   .review__product {
-    max-width: 80%;
+    max-width: 90%;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 170px;
+  }
+  .review__product h2{
+    display: none;
   }
 
   /* ======== Pricing ========== */
+
+  .pricing-header{
+    margin-top: 122px;
+    margin: 122px 0 80px;
+  }
   .pricing-header h2{
+    font-size: clamp(1.75rem, 0.9077rem + 2.6954vw, 3rem);
     margin: 0 auto;
-    max-width: 400px;
+    max-width: 550px;
 
   }
   .pricing-content {
