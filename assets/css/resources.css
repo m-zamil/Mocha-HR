@@ -1,0 +1,253 @@
+h1{
+    font-size: clamp(2.5rem, 2.0599rem + 1.4085vw, 3.75rem);
+}
+h2{
+    margin: 1em 0;
+}
+button{
+    cursor: pointer;
+}
+.btn-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+/* ====== Hero ===== */
+.hero-image{
+    margin-top: 12px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.hero-ctas-wrapper{
+    margin-top: 30px;
+}
+
+/* ===== Temp card ===== */
+.temp-card{
+    position: relative;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.temp__title{
+    position: absolute;
+    bottom: 45px;
+    margin: 20px;
+    margin-right: 40px;
+    font-size: 11px;
+    font-weight: 500;
+    color: #7293A4;
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px 36px 15px 20px;
+}
+
+.temp__image{
+    filter: drop-shadow(0 25px 99px rgba(3,27,52,6%));
+}
+
+/* ======= Surevey ====== */
+.survey{
+    padding-top: 80px;
+}
+.survey__text{
+    margin-bottom: 0;
+}
+.survey-icon-wrapper{
+    text-align: center;
+}
+/* == Download == */
+.download{
+    margin-top: 70px;
+    text-align: center;
+}
+.download-content{
+    border-radius: 30px;
+    background-color: #F8F5F9;
+    padding: 78px 22px 66px;
+}
+.download-content .btn-wrapper{
+    justify-content: center;
+    margin-top: 30px;
+}
+.download-content .btn{
+    min-width: 150px;
+}
+
+/* ======= Related ========= */
+.related{
+    margin-top: 90px;
+    position: relative;
+}
+.related::after{
+    content: "";
+    position: absolute;
+    display: block;
+    z-index: -1;
+    background-color: #1D1E28;
+    height: 286px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.related h2{
+    text-align: center;
+    line-height: 1;
+}
+.temp-cards{
+    display: flex;
+    overflow: auto;
+    margin: 0 -30px;
+    margin-top: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+    gap: 40px;
+}
+.temp-card{
+    min-width: 267px;
+}
+.temp-cards .temp__image{
+    filter: none;
+}
+
+.temp-cards .temp__title{
+    font-size: 15px;
+    margin-left: 0;
+    border-radius: 0 10px 10px 0;
+    margin-right: 30px;
+}
+.temp__title--green{
+    color: #7293A4;
+
+}
+.temp__title--blue{
+    color: #82A7CE;
+
+}
+.temp__title--yellow{
+    color: #B7B18C;
+
+}
+.temp__title--cyan{
+    color: #0398B6;
+}
+.footer__area{
+    padding-top: 94px;
+}
+
+/* ===== Modal ======= */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    opacity: 0;
+    will-change: transform, opacity;
+    transform: scale(1.15);
+    transition:
+      transform 0.1s cubic-bezier(0.465, 0.183, 0.153, 0.946),
+      opacity 0.1s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+  }
+  .modal.visible {
+    background: rgba(44,45,57,0.7);
+    pointer-events: auto;
+    z-index: 3;
+    opacity: 1;
+    transform: scale(1);
+    transition:
+      transform 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946),
+      opacity 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+  }
+  .modal-body{
+    background-color: white;
+    padding:75px 30px 40px;
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+    /* overflow-y: scroll; */
+  }
+  fieldset{
+    border: 1px solid #D4D4D6;
+    border-radius: 10px;
+    text-align: left;
+  }
+  input{
+    border: 0;
+    text-align: left;
+  }
+  input:focus{
+    border: 0;
+  }
+  input:focus-visible{
+    border: 0;
+    outline: 0;
+  }
+  .close-btn{
+    content: url(../../close-btn.svg);
+  }
+
+
+@media (min-width:768px){
+    .hero{
+        margin-top: 50px;
+    }
+    .hero-wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .hero-image{
+        flex-basis: 35%;
+        order:1
+    }
+    .hero-content{
+        flex-basis: 40%;
+    }
+    .temp__title{
+        font-size: 15px;
+    }
+
+    .temp__image{
+        order: 1;
+    }
+    /* ====== Surevey ===== */
+    .survey{
+        margin-top: 80px;
+    }
+    .survey-wrapper{
+        display: flex;
+    }
+    .survey__title{
+        margin-top: 0;
+    }
+    .survey-icon-wrapper{
+        flex-basis: 14%;
+    }
+    .survey-content{
+        flex-basis: 42%;
+    }
+    .survey-content:last-child{
+        flex-basis: 37%;
+        margin: 0 auto;
+    }
+    /* ===== Download ===== */
+    .download{
+        margin-top: 170px;
+    }
+    /* ====== Related ===== */
+    .related{
+        margin-top: 200px;
+    }
+    .temp-cards{
+        margin-top: 80px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .footer__area{
+        padding-top: 132px
+    }
+}
