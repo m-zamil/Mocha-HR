@@ -164,11 +164,11 @@ button{
       opacity 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946);
   }
   .modal-body{
+    position: relative;
     background-color: white;
     padding:75px 30px 40px;
     border-radius: 15px 15px 0 0;
     text-align: center;
-    /* overflow-y: scroll; */
   }
   fieldset{
     border: 1px solid #D4D4D6;
@@ -187,7 +187,12 @@ button{
     outline: 0;
   }
   .close-btn{
-    content: url(../../close-btn.svg);
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    position: absolute;
+    top: 20px;
+    right: 20px;
   }
 
 
@@ -246,6 +251,9 @@ button{
         margin-top: 80px;
         padding-left: 0;
         padding-right: 0;
+    }
+    .modal-body{
+        padding: 50px;
     }
     .footer__area{
         padding-top: 132px
