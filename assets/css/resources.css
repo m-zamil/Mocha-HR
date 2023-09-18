@@ -16,7 +16,6 @@ button{
 .hero-image{
     margin-top: 12px;
     margin-bottom: 40px;
-    text-align: center;
 }
 .hero-ctas-wrapper{
     margin-top: 30px;
@@ -144,7 +143,7 @@ button{
     height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     pointer-events: none;
     opacity: 0;
     will-change: transform, opacity;
@@ -169,9 +168,17 @@ button{
     padding:75px 30px 40px;
     border-radius: 15px 15px 0 0;
     text-align: center;
+    max-height: 90vh;
+    overflow: hidden;
+  }
+  .modal-content h2{
+    max-width: 22ch;
+  }
+  .modal-content p{
+    margin: 50px auto 20px;
   }
   fieldset{
-    border: 1px solid #D4D4D6;
+    border: 1px solid #212121;
     border-radius: 10px;
     text-align: left;
   }
@@ -186,13 +193,47 @@ button{
     border: 0;
     outline: 0;
   }
+  legend{
+    font-size: 12px;
+  }
   .close-btn{
     background-color: transparent;
     border: 0;
     outline: 0;
+    line-height: 1;
+    padding: 20px;
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 0;
+    right: 0;
+  }
+  .preview-img-wrapper{
+    overflow: auto;
+     max-height: 80vh;
+  }
+  .preview__img{
+    padding:0 4px 0 0;
+    padding-bottom: 150px;
+  }
+  .modal--preview{
+    background-color: #F9FBFD;
+    /* padding: 7% 0; */
+  }
+  .modal--preview .modal-body{
+    background-color: #F9FBFD;
+  }
+  .modal-footer{
+    bottom: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    width: 100%;
+    border-top: 1px solid #F8F5F9;
+    padding: 30px 0;
+  }
+  .modal-footer .btn-wrapper{
+    justify-content: center;
+    margin: 30px auto 0;
   }
 
 
@@ -254,6 +295,21 @@ button{
     }
     .modal-body{
         padding: 50px;
+        padding: 100px 150px;
+        padding: 7% 10%;
+        border-radius: 15px;
+    }
+    
+    .modal {
+        align-items: center;        
+        overflow-y: auto;
+    }
+    .modal--preview{
+        align-items: flex-end;
+    }
+    .modal--preview .modal-body{
+        border-radius: 15px 15px 0 0;
+        padding: 5% 8%;
     }
     .footer__area{
         padding-top: 132px

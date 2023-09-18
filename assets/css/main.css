@@ -18,6 +18,9 @@
   background-color: #9263c1;
   color: white;
 }
+.hero__cta:hover{
+  background-color: #AD80D9;
+}
 .hero__image {
   margin: 0 -14px;
 }
@@ -515,10 +518,6 @@
     justify-content: space-between;
     margin-bottom: 40px;
     margin: 40px 0;
-    background-image: url(../images/SVG/quote-open.svg);
-    background-repeat: no-repeat;
-    background-size: 70px;
-    background-position: center calc(100% - 72px);
   }
 
   .hero-content {

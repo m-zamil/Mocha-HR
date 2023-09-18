@@ -261,7 +261,7 @@
               <div class="pricing-card">
                 <h2>Individual</h2>
                 <p>A self-serve plan for individuals who want the basics at an affordable price.</p>
-                <div class="pricing-card__price">$49</div>
+                <div class="pricing-card__price" id="price-1">$49</div>
                 <h4>What you get in Basic:</h4>
                 <h5>AI Generated Setup Toolkit:</h5>
                 <ul class="pricing-feature-list">
@@ -283,7 +283,7 @@
               <div class="pricing-card pricing-card--team">
                 <h2>Team</h2>
                 <p>For small teams who want the full potential of Mocha</p>
-                <div class="pricing-card__price">$199</div>
+                <div class="pricing-card__price" id="price-2">$199</div>
                 <h4>What you get in Professional:</h4>
                 <h5>AI Generated Setup Toolkit:</h5>
                 <ul class="pricing-feature-list">
@@ -408,7 +408,7 @@
             <div class="revolutionize-content">
               <h2>Ready to Revolutionize Your HR Operations?</h2>
               <p>Sign up now for a 7-day free trial and experience the magic of Mocha firsthand</p>
-              <a href="#" class="btn btn--lg">Schedule a Demo</a>
+              <a href="#" class="btn btn--lg btn--green">Schedule a Demo</a>
             </div>
           </div>
         </div>
@@ -447,5 +447,20 @@
     </footer>
 
     <script src="./assets/js/main.js"></script>
+    <script>
+      const switchbtn = document.querySelectorAll('.pricing-switch button');
+      const price1 = document.getElementById("price-1");
+      const price2 = document.getElementById("price-2");
+
+      switchbtn[0].addEventListener("click",function(){
+        price1.textContent="$49";
+        price2.textContent="$199"
+        })
+        switchbtn[1].addEventListener("click",function(){
+        price1.textContent="$32";
+        price2.textContent="$101"
+        })
+   
+    </script>
   </body>
 </html>

@@ -64,7 +64,6 @@ a {
 }
 a:hover {
   text-decoration: none;
-  color: inherit;
 }
 
 button:hover,
@@ -91,24 +90,40 @@ select {
   padding: 10px 18px;
   padding: 17px 30px;
   border: 2px solid transparent;
+  transition: all 0.25s;
 }
 
 .btn--outline {
   border: 2px solid #000000;
   background-color: transparent;
 }
+.btn--outline:hover{
+  background-color: var(--black);
+  color: white;
+}
 
 .btn--light {
   color: white;
   border-color: white;
 }
+.btn--light:hover{
+  background-color: white;
+  color: var(--black);
+}
 .btn--dark {
   background-color: var(--black);
   color: white;
 }
+.btn--dark:hover{
+  background-color: #1D1E28;
+
+}
 .btn--green{
   color: white;
   background-color: #71B991;
+}
+.btn--green:hover{
+  background-color: #62A780;
 }
 .btn--lg {
   width: 100%;
@@ -159,6 +174,12 @@ img {
 }
 
 /* || Navbar styles*/
+header{
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1;
+}
 .navbar {
   display: flex;
   justify-content: start;
@@ -318,7 +339,7 @@ img {
 
 @media (min-width: 768px) {
   .btn{
-    padding: 21px 34px 20px;
+    padding: 18px 34px 17px;
   }
   .btn--lg {
     width: auto;

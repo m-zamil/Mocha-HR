@@ -63,7 +63,7 @@
           <div class="hero-wrapper">
             <div class="hero-image">
               <div class="temp-card">
-                <img class="temp__image" src="./template-1.png" srcset="./template-1-2x.png" width="450" alt="">
+                <img class="temp__image" src="./assets/images/template-1.png" srcset="./assets/images/template-1-2x.png" width="450" alt="">
                 <p class="temp__title">Company Event Feedback Survey Template</p>
               </div>
             </div>
@@ -86,7 +86,7 @@
         <div class="container">
           <div class="survey-wrapper">
           <div class="survey-icon-wrapper">
-            <img class="survey__icon" src="./survey-icon.svg" alt="">
+            <img class="survey__icon" src="./assets/images/survey-icon.svg" alt="">
           </div>
           
             <div class="survey-content">
@@ -107,8 +107,8 @@
           <div class="download-content">
           <h3>Download this template:</h3>
           <div class="btn-wrapper">
-            <a href="#" class="btn btn--outline">Word Doc</a>
-            <a href="#" class="btn btn--outline">Google Form</a>
+            <button class="btn btn--outline downloadBtn">Word Doc</button>
+            <button class="btn btn--outline downloadBtn">Google Form</button>
           </div>
         </div>
         </div>
@@ -118,19 +118,19 @@
           <h2>Related templates & resources</h2>
           <div class="temp-cards">
             <div class="temp-card">
-              <img class="temp__image" src="./temp-1.png" srcset="./temp-1-2x.png" width="266" alt="">
+              <img class="temp__image" src="./assets/images/temp-1.png" srcset="./assets/images/temp-1-2x.png" width="266" alt="">
               <p class="temp__title temp__title--green">Company Event Feedback Survey Template</p>
             </div>
             <div class="temp-card">
-              <img class="temp__image" src="./temp-2.png" width="267" alt="">
+              <img class="temp__image" src="./assets/images/temp-2.png" width="267" alt="">
               <p class="temp__title temp__title--blue">Company Event Feedback Survey Template</p>
             </div>
             <div class="temp-card">
-              <img class="temp__image" src="./temp-3.png" width="267" alt="">
+              <img class="temp__image" src="./assets/images/temp-3.png" width="267" alt="">
               <p class="temp__title temp__title--yellow">Company Event Feedback Survey Template</p>
             </div>
             <div class="temp-card">
-              <img class="temp__image" src="./temp-4.png" width="267" alt="">
+              <img class="temp__image" src="./assets/images/temp-4.png" width="267" alt="">
               <p class="temp__title temp__title--cyan">Company Event Feedback Survey Template</p>
             </div>
           </div>
@@ -140,7 +140,7 @@
     <footer class="footer__area">
       <div class="container">
         <div class="footer__logo">
-          <a href="#"><img src="assets/images/SVG/new-logo.svg" alt="" /></a>
+          <a href="#"><img src="./assets/images/SVG/new-logo.svg" alt="" /></a>
         </div>
         <div class="footer__bottom">
           <div class="footer__copywright__text col-4">
@@ -168,31 +168,29 @@
         </div>
       </div>
     </footer>
-    <div class="modal" id="emailModal">
-     <div class="modal-body">
-      <button class="close"></button>
-      <div class="modal-content">
-        <h3>Download your free resource</h3>
-        <h2>Communications Request Form Template</h2>
-        <form action="/" method="">
-          <fieldset>
-            <legend>Company Email *</legend>
-            <input type="email" name="email" id="email" placeholder="colin@meetbreeze.com" required />
-          </fieldset>
-
-          <p>Your resource will be downloaded right away!</p>
-          <div>
-            <input type="submit" class="btn btn--green" value="Subscribe!" />
+    <div class="modal modal--preview" id="previewModal">
+      <div class="modal-body">
+       <button class="close-btn close-2">
+         <img src="./assets/images/close-btn.svg" width="12" height="12" alt="close">
+        </button>
+       <div class="modal-content">
+        <div class="preview-img-wrapper">
+          <img class="preview__img" src="./assets/images/template-sample.png" srcset="./assets/images/template-sample-2x.png 2x" alt="">
+        </div>
+        <div class="modal-footer">
+          <h3>Download this template:</h3>
+          <div class="btn-wrapper">
+            <button class="btn btn--outline downloadBtn">Word Doc</button>
+            <button class="btn btn--outline downloadBtn">Google Form</button>
           </div>
-        </form>
-
+        </div>
+       </div>
       </div>
      </div>
-    </div>
-    <div class="modal" id="previewModal">
+    <div class="modal" id="emailModal">
       <div class="modal-body">
-       <button class="close-btn">
-        <img src="./close-btn.svg" width="20" height="20" alt="close">
+       <button class="close-btn close-1">
+        <img src="./assets/images/close-btn.svg" width="12" height="12" alt="close">
        </button>
        <div class="modal-content">
          <h3>Download your free resource</h3>
@@ -204,32 +202,52 @@
            </fieldset>
  
            <p>Your resource will be downloaded right away!</p>
+           
            <div>
-             <input type="submit" class="btn btn--green" value="Subscribe!" />
+            <button type="submit" class="btn btn--green">Submit</button>
            </div>
          </form>
- 
        </div>
       </div>
      </div>
 
+
+
     <script src="./assets/js/main.js"></script>
     <script>
             var emailModal = document.getElementById("emailModal");
-      var downloadBtns = document.querySelectorAll(".downloadBtn");
+            var previewModal = document.getElementById("previewModal");
+            var downloadBtns = document.querySelectorAll(".downloadBtn");
+            var previewBtns = document.querySelectorAll(".previewBtn");
+
+            const closeBtn1 = document.querySelector(".close-1");
+            const closeBtn2 = document.querySelector(".close-2");
+
+          
+   
       downloadBtns.forEach(function(btn){
         btn.addEventListener("click",function(){
           emailModal.classList.add("visible");
         })
       })
-
-      var previewModal = document.getElementById("previewModal");
-      var downloadBtns = document.querySelectorAll(".previewBtn");
-      downloadBtns.forEach(function(btn){
+     
+      previewBtns.forEach(function(btn){
         btn.addEventListener("click",function(){
           previewModal.classList.add("visible");
         })
       })
+
+      closeBtn1.addEventListener("click",function(){
+          emailModal.classList.remove("visible");
+        })
+     
+      
+        closeBtn2.addEventListener("click",function(){
+          previewModal.classList.remove("visible")
+        })
+    
+
+
 
 
     </script>
