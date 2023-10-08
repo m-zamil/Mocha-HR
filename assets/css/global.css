@@ -37,6 +37,7 @@ h1 {
   font-weight: 600;
   margin: 0;
   letter-spacing: -0.2px;
+  letter-spacing: calc(clamp(2.5rem, 1.8398rem + 2.1127vw, 4.375rem) * -20 / 1000);
 }
 h2 {
   font-size: 1.75rem;
@@ -97,7 +98,7 @@ select {
   border: 2px solid #000000;
   background-color: transparent;
 }
-.btn--outline:hover{
+.btn--outline:hover {
   background-color: var(--black);
   color: white;
 }
@@ -106,7 +107,7 @@ select {
   color: white;
   border-color: white;
 }
-.btn--light:hover{
+.btn--light:hover {
   background-color: white;
   color: var(--black);
 }
@@ -114,16 +115,15 @@ select {
   background-color: var(--black);
   color: white;
 }
-.btn--dark:hover{
-  background-color: #1D1E28;
-
+.btn--dark:hover {
+  background-color: #1d1e28;
 }
-.btn--green{
+.btn--green {
   color: white;
-  background-color: #71B991;
+  background-color: #71b991;
 }
-.btn--green:hover{
-  background-color: #62A780;
+.btn--green:hover {
+  background-color: #62a780;
 }
 .btn--lg {
   width: 100%;
@@ -174,11 +174,11 @@ img {
 }
 
 /* || Navbar styles*/
-header{
+header {
   position: sticky;
   top: 0;
   background-color: white;
-  z-index: 1;
+  z-index: 2;
 }
 .navbar {
   display: flex;
@@ -189,16 +189,13 @@ header{
 .nav-logo {
   display: flex;
   align-items: center;
-}
-.nav-logo__text {
-  font-size: 18px;
-  margin-left: 6px;
+  display: inline-block;
 }
 
 .nav-cta {
   margin-left: auto;
 }
-.nav-cta .btn{
+.nav-cta .btn {
   font-size: 14px;
   padding: 10px 18px;
 }
@@ -207,6 +204,7 @@ header{
   cursor: pointer;
   z-index: 3;
   margin-right: 16px;
+  -webkit-tap-highlight-color: transparent;
 }
 .bar {
   display: block;
@@ -229,8 +227,8 @@ header{
 .active .nav-logo--menu {
   display: inline-block;
   position: absolute;
-  left: 30px;
-  top: 27px;
+  left: 60px;
+  top: 57px;
 }
 
 .nav-menu {
@@ -240,9 +238,9 @@ header{
   padding-top: 84px;
   padding-bottom: 84px;
   padding-bottom: 40px;
-  padding-left: 30px;
+  padding-left: 60px;
   padding-right: 30px;
-  border-radius: 0 20px 20px 0;
+  border-radius: 0 15px 15px 0;
   width: 96%;
   width: calc(100% - 30px);
   max-width: 310px;
@@ -338,7 +336,7 @@ header{
 }
 
 @media (min-width: 768px) {
-  .btn{
+  .btn {
     padding: 18px 34px 17px;
   }
   .btn--lg {
@@ -351,13 +349,11 @@ header{
   .hamburger {
     display: none;
   }
-  .nav-logo__text {
-    font-size: 22px;
-  }
+
   .nav-logo img {
-    width: 35px;
+    width: 111px;
   }
-  .nav-cta .btn{
+  .nav-cta .btn {
     font-size: 15px;
   }
   .nav-cta--mobile {
@@ -385,7 +381,6 @@ header{
     position: static;
     box-shadow: none;
   }
-
 
   /* ======== Footer ======== */
   .footer__area {

@@ -1,0 +1,217 @@
+.btn {
+  padding: 16px 30px 15px;
+}
+/* ================ Hero ===============*/
+.hero {
+  margin-top: 40px;
+}
+.hero__heading {
+}
+.hero__text {
+  margin-bottom: 2em;
+}
+/*========= Featured ===========*/
+.featured {
+  position: relative;
+  color: white;
+  margin-top: 56px;
+  padding-bottom: 60px;
+}
+.featured::after {
+  content: '';
+  position: absolute;
+  top: 120px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--black);
+  z-index: -1;
+}
+.shadow {
+  filter: drop-shadow(0 10px 15px rgba(28, 36, 43, 6%));
+}
+
+.featured__image {
+  max-width: 315px;
+  border-radius: 35px;
+}
+.featured-content {
+  margin-top: 50px;
+}
+.btn-wrapper {
+  margin-top: 30px;
+}
+.btn-wrapper .btn {
+  margin-bottom: 15px;
+}
+/* ========= browse ======== */
+.browse {
+  text-align: center;
+  margin-top: 90px;
+}
+.browse__heading {
+  font-size: clamp(1.875rem, 1.743rem + 0.4225vw, 2.25rem);
+}
+.temp-count {
+  font-size: 0.625rem;
+  font-weight: 600;
+  color: white;
+  background-color: var(--black);
+  padding: 7px;
+  border-radius: 10px;
+}
+.browse-cards {
+  margin-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 40px;
+}
+.browse-card {
+  max-width: 302px;
+}
+.browse-card__title {
+  font-size: clamp(1.25rem, 1.0168rem + 0.7463vw, 1.375rem);
+  line-height: 1.25;
+  max-width: 24ch;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 20px auto 0;
+}
+/* =========== revolutionize ============== */
+.revolutionize {
+  margin-bottom: -180px;
+  margin-top: 120px;
+}
+.revolutionize-wrapper {
+  padding: 40px 30px;
+  padding-bottom: 190px;
+  position: relative;
+  text-align: center;
+  background-size: 100%;
+  background-image: url(../images/revolutionaize-bg-sm.jpg);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-color: #d0dfd7;
+  border-radius: 30px;
+}
+.revolutionize-wrapper h2 {
+  font-weight: 400;
+  line-height: 1.27;
+  letter-spacing: calc(clamp(1.75rem, 1.4859rem + 0.8451vw, 2.5rem) * -20 / 1000);
+  max-width: 15ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+.revolutionize-wrapper p {
+  line-height: 1.25;
+  margin-bottom: 30px;
+}
+.revolutionize-wrapper a {
+  background: #72b991;
+  color: #fff;
+}
+.revolutionize-content {
+  max-width: 390px;
+}
+
+/* ========= Responsive ========= */
+@media (min-width: 768px) {
+  /*======== hero =============== */
+  .hero {
+    margin-top: 120px;
+  }
+
+  .hero__cta {
+    padding: 11px 16px 10px;
+  }
+  .hero-wrapper {
+    display: flex;
+  }
+  .hero__heading {
+    flex-basis: 45%;
+    margin-right: -5%;
+  }
+  .hero-content {
+    flex-basis: 28%;
+    margin: 0 auto;
+  }
+  /*========= Featured ===========*/
+  .featured {
+    padding-bottom: 0;
+    margin-top: 150px;
+  }
+  .featured::after {
+    top: 55px;
+    bottom: 55px;
+    left: 30px;
+    right: 30px;
+    border-radius: 30px;
+    max-width: 1462px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .featured-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  .featured-media {
+    flex-basis: 50%;
+    margin-right: 9%;
+  }
+  .featured-content {
+    flex-basis: 43%;
+    margin-top: 0;
+  }
+  .btn-wrapper .btn {
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
+
+  .featured__image {
+    width: 570px;
+    max-width: 100%;
+  }
+  /* ========= browse ======== */
+  .browse {
+    margin-top: 180px;
+  }
+  .browse-cards {
+    gap: 70px 40px;
+    margin-top: 80px;
+  }
+  .browse-card {
+  }
+  .browse-card img {
+    width: 302px;
+    height: 290px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 35px;
+  }
+  /* =========== Revolutionaize ======= */
+  .revolutionize {
+    margin-top: 200px;
+  }
+  .revolutionize-wrapper {
+    padding: 80px 100px 66px;
+    position: relative;
+    text-align: left;
+    background-image: url(../images/revolutionaize-bg-lg.jpg);
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: contain;
+  }
+
+  .revolutionize-wrapper a {
+    margin-top: 0;
+  }
+  .revolutionize-wrapper h2 {
+    margin-left: 0;
+    max-width: 16ch;
+  }
+  .revolutionize-wrapper p {
+    font-size: 22px;
+    line-height: 30px;
+  }
+}
